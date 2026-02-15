@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Software Engineer Intern",
+    "company": "Garrick Institute for the Risk Sciences",
+    "companyUrl": "https://risksciences.ucla.edu",
+    "date": "Jun 2025 — Dec 2025",
+    "description": [
+      "Engineered 10+ modular React components, enhancing UI consistency and accelerating data analysis workflows.",
+      "Integrated a React frontend with Python ML pipelines via REST APIs, cutting manual data handling by 40% for research teams.",
+      "Collaborated with graduate researchers to design dashboards visualizing ML outputs, improving clarity and decision-making."
+    ],
+    "technologies": ["React", "Python", "REST APIs", "Machine Learning", "Dashboard Design"]
+  },
+  {
+    "title": "Software Engineer Intern",
+    "company": "Daily Bruin",
+    "companyUrl": "https://dailybruin.com",
+    "date": "Oct 2024 — Jun 2025",
+    "description": [
+      "Refactored the website with React and Tailwind CSS, improving mobile performance and modernizing design components.",
+      "Created 10+ dynamic event pages and reusable widgets to streamline campus marketing and reduce repetitive development.",
+      "Resolved 20+ UI bugs and cross-device layout issues, improving site reliability and visual consistency for 5,000+ daily readers."
+    ],
+    "technologies": ["React", "Tailwind CSS", "JavaScript", "HTML/CSS"]
+  }
+]

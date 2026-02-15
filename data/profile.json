@@ -1,0 +1,17 @@
+{
+  "name": "Henry Nguyen",
+  "tagline": "UCLA CS '26 • USC MSCS '28",
+  "about": [
+    "I'm a software engineer passionate about building accessible, pixel-perfect digital experiences. Currently studying Computer Science at UCLA with plans to pursue my Master's at USC.",
+    "My main focus is creating performant, elegant web applications that combine thoughtful design with robust engineering. I enjoy working across the full stack, from crafting polished user interfaces to architecting scalable backend systems.",
+    "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, and collaborating with other developers to solve interesting problems."
+  ],
+  "contactEmail": "henry@example.com",
+  "contactMessage": "I'm currently open to new opportunities and my inbox is always open. Whether you have a question, want to collaborate, or just want to say hi — feel free to reach out!",
+  "socialLinks": {
+    "github": "https://github.com/nothenrynguyen",
+    "linkedin": "https://linkedin.com/in/henrynguyen",
+    "email": "mailto:henry@example.com",
+    "resume": "/resume.pdf"
+  }
+}

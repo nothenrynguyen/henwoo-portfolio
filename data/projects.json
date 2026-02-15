@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Stay in Bloom",
+    "image": "/images/project-stay-in-bloom.png",
+    "description": [
+      "A community digital flower garden where users can draw a flower, leave a message, and plant it for everyone to see.",
+      "Features a creative canvas for drawing flowers, persistent community garden powered by Supabase, and real-time updates.",
+      "Deployed on Vercel with a live public instance."
+    ],
+    "technologies": ["React", "Vite", "Supabase", "JavaScript", "CSS"],
+    "github": "https://github.com/nothenrynguyen/stay-in-bloom",
+    "demo": "https://stay-in-bloom.vercel.com"
+  }
+]
