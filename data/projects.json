@@ -9,6 +9,6 @@
     ],
     "technologies": ["React", "Vite", "Supabase", "JavaScript", "CSS"],
     "github": "https://github.com/nothenrynguyen/stay-in-bloom",
-    "demo": "https://stay-in-bloom.vercel.com"
+    "demo": "https://stay-in-bloom.vercel.app"
   }
 ]

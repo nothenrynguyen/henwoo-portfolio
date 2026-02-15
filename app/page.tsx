@@ -3,7 +3,6 @@ import CursorGlow from "@/components/CursorGlow";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
           <About />
           <Experience />
           <Projects />
-          <Contact />
 
           {/* Footer */}
           <footer className="pb-8 text-sm text-slate">

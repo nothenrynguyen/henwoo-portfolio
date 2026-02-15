@@ -1,21 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FiGithub, FiLinkedin, FiMail, FiFileText, FiMenu, FiX } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiYoutube, FiMenu, FiX } from "react-icons/fi";
+import { FaSoundcloud } from "react-icons/fa";
 import profile from "@/data/profile.json";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const SOCIAL_LINKS = [
   { icon: FiGithub, href: profile.socialLinks.github, label: "GitHub" },
   { icon: FiLinkedin, href: profile.socialLinks.linkedin, label: "LinkedIn" },
-  { icon: FiMail, href: profile.socialLinks.email, label: "Email" },
-  { icon: FiFileText, href: profile.socialLinks.resume, label: "Resume" },
+  { icon: FiYoutube, href: profile.socialLinks.youtube, label: "YouTube" },
+  { icon: FaSoundcloud, href: profile.socialLinks.soundcloud, label: "SoundCloud" },
 ];
 
 export default function Sidebar() {

@@ -7,9 +7,9 @@
  * them as utility classes, e.g.  bg-navy, text-green, etc.
  */
 @theme {
-  --color-navy: #0a192f;
-  --color-light-navy: #112240;
-  --color-lightest-navy: #233554;
+  --color-navy: #06101f;
+  --color-light-navy: #0e1e38;
+  --color-lightest-navy: #1a2f4e;
   --color-slate: #8892b0;
   --color-light-slate: #a8b2d1;
   --color-lightest-slate: #ccd6f6;
