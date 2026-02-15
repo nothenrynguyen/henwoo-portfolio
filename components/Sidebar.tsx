@@ -105,8 +105,8 @@ export default function Sidebar() {
       )}
 
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-[600px] lg:flex-col lg:justify-center lg:px-24">
-        <div>
+      <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-[600px] lg:flex-col lg:items-center lg:justify-center lg:px-12">
+        <div className="-mt-[10vh] w-full max-w-[320px]">
           <h1 className="text-5xl font-bold tracking-tight text-lightest-slate">
             {profile.name}
           </h1>
