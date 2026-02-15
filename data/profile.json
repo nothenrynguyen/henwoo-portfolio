@@ -2,9 +2,10 @@
   "name": "Henry Nguyen",
   "tagline": "UCLA CS '26 • USC MSCS '28",
   "about": [
-    "I'm a software engineer studying Computer Science at UCLA, graduating in 2026, and heading to USC for my Master's in Computer Science in 2028.",
-    "Currently, I'm a Software Engineer Intern at the Garrick Institute for the Risk Sciences, where I build modular React components and integrate frontend interfaces with Python ML pipelines to streamline research workflows. Previously, I was at the Daily Bruin — UCLA's student newspaper — where I refactored the website with React and Tailwind CSS and shipped dynamic event pages for 5,000+ daily readers.",
-    "Outside of work, you can find me on the volleyball or basketball court, or making and mixing music 🎧"
+    "I'm a software engineer studying computer science at UCLA and pursuing a master's in computer science at USC, graduating in 2028. I enjoy building clean, intuitive web experiences and connecting thoughtful design with reliable, scalable systems.",
+    "Currently, I'm a software engineer intern at the Garrick Institute for the Risk Sciences, where I build modular React components and connect frontend interfaces to Python ML pipelines to support research workflows.",
+    "Previously, I worked with the Daily Bruin at UCLA, where I refactored parts of the website with React and Tailwind and shipped dynamic event pages for more than 5,000 daily readers.",
+    "Outside of work, you can usually find me playing volleyball or making music!"
   ],
   "socialLinks": {
     "github": "https://github.com/nothenrynguyen",
