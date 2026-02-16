@@ -24,15 +24,15 @@ export default function Experience() {
         {experiences.map((exp, i) => (
           <div
             key={i}
-            className="group relative grid gap-4 rounded-lg p-5 transition-all sm:grid-cols-8 sm:gap-8 lg:p-6 lg:hover:bg-light-navy/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg"
+            className="group relative flex flex-col gap-4 rounded-lg p-5 transition-all sm:flex-row sm:gap-6 lg:p-6 lg:hover:bg-light-navy/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg"
           >
             {/* Date */}
-            <div className="text-xs font-semibold uppercase tracking-wide text-slate sm:col-span-2 sm:pt-1">
+            <div className="w-36 shrink-0 whitespace-nowrap pt-1 text-xs font-semibold uppercase tracking-wide text-slate">
               {exp.date}
             </div>
 
             {/* Content */}
-            <div className="sm:col-span-6">
+            <div className="min-w-0 flex-1">
               <h3 className="font-medium leading-snug">
                 <a
                   href={exp.companyUrl}

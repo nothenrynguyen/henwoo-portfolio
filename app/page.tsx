@@ -13,7 +13,7 @@ export default function Home() {
         <Sidebar />
 
         {/* Right Content — scrollable */}
-        <main className="pt-24 lg:ml-auto lg:w-1/2 lg:max-w-[600px] lg:pt-24 lg:pb-24">
+        <main className="pt-24 lg:ml-auto lg:w-[55%] lg:max-w-[700px] lg:pt-24 lg:pb-24">
           <About />
           <Experience />
           <Projects />

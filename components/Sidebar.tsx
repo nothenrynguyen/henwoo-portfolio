@@ -105,14 +105,20 @@ export default function Sidebar() {
       )}
 
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-[600px] lg:flex-col lg:pl-[12vw] lg:pt-24">
-        <div className="w-full max-w-[320px]">
-          <h1 className="text-5xl font-bold tracking-tight text-lightest-slate">
+      <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-[600px] lg:flex-col lg:justify-between lg:pl-[12vw] lg:py-24">
+        <div>
+          <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-lightest-slate">
             {profile.name}
           </h1>
-          <h2 className="mt-3 text-lg font-medium text-slate">
-            {profile.tagline}
+          <h2 className="mt-3 text-xl font-medium text-lightest-slate">
+            Software Developer
           </h2>
+          <p className="mt-2 text-base text-slate">
+            always building
+          </p>
+          <p className="mt-1 text-sm text-slate">
+            {profile.tagline}
+          </p>
 
           {/* Navigation */}
           <nav className="mt-16">
@@ -145,8 +151,8 @@ export default function Sidebar() {
           </nav>
         </div>
 
-        {/* Social Icons */}
-        <div className="mt-12 flex gap-6">
+        {/* Social Icons — pinned to bottom */}
+        <div className="flex gap-6">
           {SOCIAL_LINKS.map((link) => (
             <a
               key={link.label}

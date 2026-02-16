@@ -25,7 +25,7 @@ A clean, minimal, dark-themed personal portfolio website built with **Next.js 14
 ```bash
 # Clone the repository
 git clone https://github.com/nothenrynguyen/henwoo-portfolio.git
-cd henwoo-portfolio/site
+cd henwoo-portfolio
 
 # Install dependencies
 npm install
@@ -44,16 +44,14 @@ All personal content lives in the **`/data`** directory as JSON files. Edit them
 
 ### `data/profile.json`
 
-Your name, tagline, about paragraphs, social links, and contact info.
+Your name, tagline, about paragraphs, and social links.
 
-| Field            | Description                          |
-| ---------------- | ------------------------------------ |
-| `name`           | Your full name                       |
-| `tagline`        | Short subtitle / headline            |
-| `about`          | Array of paragraphs for About section|
-| `contactEmail`   | Email shown in Contact section       |
-| `contactMessage` | Message above the contact button     |
-| `socialLinks`    | GitHub, LinkedIn, Email, Resume URLs |
+| Field            | Description                                    |
+| ---------------- | ---------------------------------------------- |
+| `name`           | Your full name                                 |
+| `tagline`        | Short subtitle / headline                      |
+| `about`          | Array of paragraphs for About section          |
+| `socialLinks`    | GitHub, LinkedIn, YouTube, SoundCloud URLs     |
 
 ### `data/experience.json`
 
@@ -76,10 +74,10 @@ Array of projects.
 | -------------- | ----------------------------------------------- |
 | `title`        | Project name                                    |
 | `image`        | Path to preview image in `/public/images/`      |
-| `description`  | Array of bullet-point strings                   |
+| `description`  | Short paragraph describing the project          |
 | `technologies` | Array of tech stack tags                        |
 | `github`       | GitHub repository URL                           |
-| `demo`         | Live demo URL (**set to `null` to hide button**)|
+| `demo`         | Live demo URL (**set to `null` if none**)       |
 
 > **Tip:** If `experience.json` or `projects.json` is an empty array (`[]`), the section simply won't render.
 
@@ -95,9 +93,9 @@ All colours are defined as CSS custom properties in **`app/globals.css`** inside
 
 ```css
 @theme {
-  --color-navy: #0a192f;
-  --color-light-navy: #112240;
-  --color-lightest-navy: #233554;
+  --color-navy: #06101f;
+  --color-light-navy: #0e1e38;
+  --color-lightest-navy: #1a2f4e;
   --color-slate: #8892b0;
   --color-light-slate: #a8b2d1;
   --color-lightest-slate: #ccd6f6;
