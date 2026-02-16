@@ -24,7 +24,6 @@ export default function Sidebar() {
 
   useEffect(() => {
     const sections = NAV_ITEMS.map((item) => item.href.slice(1));
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -35,13 +34,28 @@ export default function Sidebar() {
       },
       { rootMargin: "-40% 0px -60% 0px" }
     );
-
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    // Scroll position logic for top/bottom
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      if (scrollY === 0) {
+        setActiveSection("about");
+      } else if (Math.abs(scrollY + windowHeight - docHeight) < 2) {
+        setActiveSection("projects");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleNavClick = (href: string) => {
