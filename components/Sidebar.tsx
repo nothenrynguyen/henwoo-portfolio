@@ -121,11 +121,11 @@ export default function Sidebar() {
       {/* Desktop Sidebar */}
       <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-[600px] lg:flex-col lg:justify-between lg:pl-[12vw] lg:py-24">
         <div>
-          <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-lightest-slate">
-            <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-white">
-              {profile.name}
+            <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-lightest-slate">
+              <span className="whitespace-nowrap text-5xl font-bold tracking-tight text-white">
+                {profile.name}
+              </span>
             </h1>
-          </h1>
           <h2 className="mt-3 text-xl font-medium text-lightest-slate">
             Software Developer
           </h2>
