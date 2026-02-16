@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/portfolio-preview.png",
+        url: "/images/portfolio-preview.svg",
         width: 1200,
         height: 630,
         alt: "Henry Nguyen Portfolio Preview"
