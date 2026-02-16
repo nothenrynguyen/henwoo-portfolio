@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     description:
       "Personal portfolio of Henry Nguyen — UCLA CS '26, USC MSCS '28.",
     type: "website",
+    images: [
+      {
+        url: "/images/portfolio-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Henry Nguyen Portfolio Preview"
+      }
+    ]
   },
 };
 
