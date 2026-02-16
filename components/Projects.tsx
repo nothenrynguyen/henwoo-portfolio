@@ -46,7 +46,7 @@ export default function Projects() {
 
               {/* Title */}
               <h3 className="text-lg font-medium leading-snug">
-                <span className="inline-flex items-center gap-2 text-lightest-slate transition-colors group-hover:text-green">
+                <span className="inline-flex items-center gap-2 text-white transition-colors group-hover:text-green">
                   {project.title}
                   <FiExternalLink className="inline-block h-4 w-4 shrink-0" />
                 </span>
@@ -62,7 +62,7 @@ export default function Projects() {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green"
+                    className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green border border-green/40"
                   >
                     {tech}
                   </span>

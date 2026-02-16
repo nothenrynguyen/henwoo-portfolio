@@ -24,7 +24,7 @@ export default function Experience() {
         {experiences.map((exp, i) => (
           <div
             key={i}
-            className="group relative flex flex-col gap-4 rounded-lg p-5 transition-all sm:flex-row sm:gap-6 lg:p-6 lg:hover:bg-light-navy/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg"
+            className="group relative flex flex-col gap-4 rounded-lg p-5 transition-all sm:flex-row sm:gap-6 lg:p-6 hover:bg-light-navy/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg"
           >
             {/* Date */}
             <div className="w-36 shrink-0 whitespace-nowrap pt-1 text-xs font-semibold uppercase tracking-wide text-slate">
@@ -38,7 +38,7 @@ export default function Experience() {
                   href={exp.companyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-lightest-slate transition-colors group-hover:text-green"
+                  className="inline-flex items-center gap-1 text-white transition-colors group-hover:text-green"
                 >
                   {exp.title} · {exp.company}
                   <FiExternalLink className="ml-1 inline-block h-3 w-3 shrink-0" />
@@ -57,7 +57,7 @@ export default function Experience() {
                 {exp.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green"
+                    className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green border border-green/40"
                   >
                     {tech}
                   </span>

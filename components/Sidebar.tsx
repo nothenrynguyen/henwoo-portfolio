@@ -108,7 +108,9 @@ export default function Sidebar() {
       <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-[600px] lg:flex-col lg:justify-between lg:pl-[12vw] lg:py-24">
         <div>
           <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-lightest-slate">
-            {profile.name}
+            <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-white">
+              {profile.name}
+            </h1>
           </h1>
           <h2 className="mt-3 text-xl font-medium text-lightest-slate">
             Software Developer
@@ -134,15 +136,17 @@ export default function Sidebar() {
                           ? "text-lightest-slate"
                           : "text-slate hover:text-lightest-slate"
                       }`}
+                      style={{ zIndex: 10 }}
                     >
                       <span
                         className={`inline-block h-px transition-all ${
                           isActive
-                            ? "w-16 bg-lightest-slate"
-                            : "w-8 bg-slate group-hover:w-16 group-hover:bg-lightest-slate"
+                            ? "w-16 bg-slate"
+                            : "w-8 bg-slate group-hover:w-16 group-hover:bg-slate"
                         }`}
+                        style={{ backgroundColor: "var(--color-slate)", zIndex: 10 }}
                       />
-                      {item.label}
+                      <span className="transition-colors group-hover:text-lightest-slate">{item.label}</span>
                     </button>
                   </li>
                 );
