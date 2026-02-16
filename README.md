@@ -1,4 +1,4 @@
-# Henry Nguyen - Portfolio
+# henwoo portfolio
 
-Inspired by [Brittany Chiang's portfolio](https://brittanychiang.com).
+henwoo.dev
 
