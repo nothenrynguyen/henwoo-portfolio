@@ -1,5 +1,4 @@
 import Sidebar from "@/components/Sidebar";
-import CursorGlow from "@/components/CursorGlow";
 import SparkleTrail from "@/components/SparkleTrail";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -8,7 +7,6 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
     <>
-      <CursorGlow />
       <SparkleTrail />
       <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:flex lg:gap-4 lg:px-24 lg:py-0">
         {/* Left Sidebar — sticky on desktop */}

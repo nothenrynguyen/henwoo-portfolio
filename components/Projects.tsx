@@ -30,7 +30,7 @@ export default function Projects() {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative block rounded-lg p-5 transition-all lg:p-6 lg:hover:bg-light-navy/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg"
+              className="group relative block rounded-lg border border-transparent p-5 transition-all lg:p-6 hover:border-[rgba(148,163,184,0.24)] hover:bg-[rgba(20,18,43,0.55)] hover:drop-shadow-lg"
             >
               {/* Image Preview — horizontal, wider */}
               <div className="mb-5 overflow-hidden rounded-md border-2 border-lightest-navy/30">

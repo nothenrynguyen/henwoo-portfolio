@@ -24,7 +24,7 @@ export default function Experience() {
         {experiences.map((exp, i) => (
           <div
             key={i}
-            className="group relative flex flex-col gap-4 rounded-lg p-5 transition-all sm:flex-row sm:gap-6 lg:p-6 hover:bg-light-navy/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg"
+            className="group relative flex flex-col gap-4 rounded-lg border border-transparent p-5 transition-all sm:flex-row sm:gap-6 lg:p-6 hover:border-[rgba(148,163,184,0.24)] hover:bg-[rgba(20,18,43,0.55)] hover:drop-shadow-lg"
           >
             {/* Date */}
             <div className="w-36 shrink-0 whitespace-nowrap pt-1 text-xs font-semibold uppercase tracking-wide text-slate">
