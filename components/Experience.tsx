@@ -6,6 +6,7 @@ interface ExperienceItem {
   company: string;
   companyUrl: string;
   date: string;
+  quote?: string;
   description: string[];
   technologies: string[];
 }
@@ -45,24 +46,32 @@ export default function Experience() {
                 </a>
               </h3>
 
-              <ul className="mt-3 flex flex-col gap-2">
-                {exp.description.map((item, j) => (
-                  <li key={j} className="text-sm leading-relaxed text-slate">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              {exp.quote ? (
+                <p className="mt-3 text-sm italic leading-relaxed text-slate">
+                  "{exp.quote}"
+                </p>
+              ) : (
+                <ul className="mt-3 flex flex-col gap-2">
+                  {exp.description.map((item, j) => (
+                    <li key={j} className="text-sm leading-relaxed text-slate">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {exp.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green border border-green/40"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              {exp.technologies.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {exp.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green border border-green/40"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}

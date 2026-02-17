@@ -22,5 +22,14 @@
       "Resolved 20+ UI bugs and cross-device layout issues, improving site reliability and visual consistency for 5,000+ daily readers."
     ],
     "technologies": ["React", "Tailwind CSS", "JavaScript", "HTML/CSS"]
+  },
+  {
+    "title": "Server / Food Runner",
+    "company": "Din Tai Fung",
+    "companyUrl": "https://dintaifungusa.com",
+    "date": "Aug 2022 — Jul 2024",
+    "quote": "please be careful, they're very hot",
+    "description": [],
+    "technologies": ["Folding XLBs", "Packing Takeout", "Being Awesome!"]
   }
 ]
