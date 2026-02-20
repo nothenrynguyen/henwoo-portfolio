@@ -1,5 +1,13 @@
 [
   {
+    "title": "MatchaDex",
+    "image": "/images/matchadex-preview.png",
+    "description": "A full-stack cafe discovery platform where users can sign in with Google, leave detailed reviews, favorite cafes, and explore locations on an interactive map. Includes an admin moderation dashboard for importing, hiding, restoring, and deleting cafes in production.",
+    "technologies": ["Next.js", "Supabase", "Prisma", "Mapbox", "TypeScript"],
+    "github": "",
+    "demo": "https://matchadex.vercel.app/"
+  },
+  {
     "title": "Stay in Bloom",
     "image": "/images/project-stay-in-bloom.png",
     "description": "A community digital flower garden where users can draw a flower, leave a message, and plant it for everyone to see. Built with React and Vite, backed by Supabase for real-time persistence, and deployed on Vercel.",

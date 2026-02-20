@@ -4,7 +4,7 @@ import experienceData from "@/data/experience.json";
 interface ExperienceItem {
   title: string;
   company: string;
-  companyUrl: string;
+  companyUrl?: string;
   date: string;
   quote?: string;
   description: string[];
@@ -35,15 +35,21 @@ export default function Experience() {
             {/* Content */}
             <div className="min-w-0 flex-1">
               <h3 className="font-medium leading-snug">
-                <a
-                  href={exp.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-white transition-colors group-hover:text-green"
-                >
-                  {exp.title} · {exp.company}
-                  <FiExternalLink className="ml-1 inline-block h-3 w-3 shrink-0" />
-                </a>
+                {exp.companyUrl ? (
+                  <a
+                    href={exp.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-white transition-colors group-hover:text-green"
+                  >
+                    {exp.title} · {exp.company}
+                    <FiExternalLink className="ml-1 inline-block h-3 w-3 shrink-0" />
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-1 text-white">
+                    {exp.title} · {exp.company}
+                  </span>
+                )}
               </h3>
 
               {exp.quote ? (

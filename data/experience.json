@@ -1,7 +1,20 @@
 [
   {
     "title": "Software Engineer Intern",
-  "company": "Garrick Institute",
+    "company": "Creative Labs",
+    "companyUrl": "",
+    "date": "Jan 2026 — Jun 2026",
+    "description": [
+      "Designed REST APIs and PostgreSQL schemas used by 50+ testers to ingest activity data powering real-time analytics dashboards.",
+      "Implemented async workers with Redis to precompute metrics, reducing latency and improving dashboard responsiveness.",
+      "Built WebSocket live updates streaming activity data to dashboards in a cross-functional team of engineers and designers.",
+      "Deployed Dockerized services with CI/CD pipelines for reliable releases and scalable demos on Vercel and cloud VMs."
+    ],
+    "technologies": ["PostgreSQL", "Redis", "WebSockets", "CI/CD"]
+  },
+  {
+    "title": "Software Engineer Intern",
+    "company": "Garrick Institute",
     "companyUrl": "https://risksciences.ucla.edu",
     "date": "Jun 2025 — Dec 2025",
     "description": [
