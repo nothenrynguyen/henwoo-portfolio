@@ -72,7 +72,7 @@ export default function SparkleTrail() {
       }
 
       ctx.closePath();
-      ctx.fillStyle = "#7ef5d4"; // softer color
+      ctx.fillStyle = "#ffffff";
       ctx.fill();
       ctx.restore();
     },

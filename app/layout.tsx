@@ -6,11 +6,11 @@ import ClientLayout from "./ClientLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Henry Nguyen — Portfolio",
+  title: "henry nguyen",
   description:
     "Personal portfolio of Henry Nguyen — UCLA CS '26, USC MSCS '28. Software engineer passionate about building elegant digital experiences.",
   openGraph: {
-    title: "Henry Nguyen — Portfolio",
+    title: "henry nguyen",
     description:
       "Personal portfolio of Henry Nguyen — UCLA CS '26, USC MSCS '28.",
     type: "website",

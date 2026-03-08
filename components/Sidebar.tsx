@@ -107,7 +107,7 @@ export default function Sidebar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate transition-colors hover:text-green"
+                  className="text-slate transition-colors duration-200 hover:text-white"
                   aria-label={link.label}
                 >
                   <link.icon size={22} />
@@ -177,7 +177,7 @@ export default function Sidebar() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate transition-colors hover:text-lightest-slate"
+              className="text-slate transition-colors duration-200 hover:text-white"
               aria-label={link.label}
             >
               <link.icon size={22} />

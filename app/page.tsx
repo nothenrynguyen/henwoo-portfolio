@@ -20,12 +20,7 @@ export default function Home() {
 
           {/* Footer */}
           <footer className="mt-24 pb-8 text-center text-sm text-slate">
-            <p>
-              Designed &amp; Built with{" "}
-              <span className="text-green">Next.js</span>,{" "}
-              <span className="text-green">Tailwind CSS</span>, and deployed on{" "}
-              <span className="text-green">Vercel</span>.
-            </p>
+            <p>made by henry</p>
           </footer>
         </main>
       </div>
