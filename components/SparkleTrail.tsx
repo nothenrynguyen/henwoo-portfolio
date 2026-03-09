@@ -10,6 +10,7 @@ interface Sparkle {
   opacity: number;
   vx: number;
   vy: number;
+  gravity?: number;
   rotation: number;
   rotationSpeed: number;
   life: number;
@@ -22,6 +23,30 @@ export default function SparkleTrail() {
   const lastMouseRef = useRef({ x: 0, y: 0 });
   const lastSpawnTime = useRef(0);
   const frameRef = useRef<number>(0);
+
+  // create burst sparkles (explosion on click/tap)
+  const createBurstSparkles = useCallback((x: number, y: number): Sparkle[] => {
+    const COUNT = 7;
+    return Array.from({ length: COUNT }, (_, i) => {
+      const baseAngle = (i / COUNT) * Math.PI * 2;
+      const angle = baseAngle + (Math.random() - 0.5) * 0.45; // ±~13° jitter
+      const speed = 1.2 + Math.random() * 0.8;
+      const maxLife = 40 + Math.random() * 20;
+      return {
+        x: x + (Math.random() - 0.5) * 6,
+        y: y + (Math.random() - 0.5) * 6,
+        size: 1.5 + Math.random() * 2.0,
+        opacity: 0.7 + Math.random() * 0.3,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        gravity: 0.04,
+        rotation: Math.random() * Math.PI * 2,
+        rotationSpeed: (Math.random() - 0.5) * 0.12,
+        life: 0,
+        maxLife,
+      };
+    });
+  }, []);
 
   // create sparkle
   const createSparkle = useCallback((x: number, y: number): Sparkle => {
@@ -112,11 +137,24 @@ export default function SparkleTrail() {
 
     window.addEventListener("mousemove", handleMouseMove);
 
+    // click burst (desktop)
+    const handleClick = (e: MouseEvent) => {
+      sparklesRef.current.push(...createBurstSparkles(e.clientX, e.clientY));
+    };
+    window.addEventListener("click", handleClick);
+
+    // touch burst (mobile)
+    const handleTouchStart = (e: TouchEvent) => {
+      const touch = e.changedTouches[0];
+      sparklesRef.current.push(...createBurstSparkles(touch.clientX, touch.clientY));
+    };
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+
     // animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const MAX_SPARKLES = 100;
+      const MAX_SPARKLES = 150;
       if (sparklesRef.current.length > MAX_SPARKLES) {
         sparklesRef.current.splice(
           0,
@@ -126,6 +164,7 @@ export default function SparkleTrail() {
 
       sparklesRef.current = sparklesRef.current.filter((s) => {
         s.life++;
+        if (s.gravity) s.vy += s.gravity;
         s.x += s.vx;
         s.y += s.vy;
         s.rotation += s.rotationSpeed;
@@ -148,9 +187,11 @@ export default function SparkleTrail() {
     return () => {
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("click", handleClick);
+      window.removeEventListener("touchstart", handleTouchStart);
       cancelAnimationFrame(frameRef.current);
     };
-  }, [createSparkle, drawStar]);
+  }, [createSparkle, createBurstSparkles, drawStar]);
 
   return (
     <canvas
