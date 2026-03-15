@@ -47,18 +47,18 @@ Detailed setup notes: `docs/SETUP_WINDOWS.md`
 | `components/SparkleTrail.tsx` | Canvas cursor sparkle trail |
 | `components/About.tsx` | About section |
 | `components/Experience.tsx` | Experience cards |
-| `components/Projects.tsx` | Project cards with images |
+| `components/Projects.tsx` | Project cards that open project modal |
 | `data/profile.json` | Name, tagline, about paragraphs, social URLs |
 | `data/experience.json` | Experience entries (array) |
-| `data/projects.json` | Project cards (array) |
+| `data/projectData.ts` | Typed project config + screenshot paths |
 
 ## 6) Known Issues / Notes
 
-- Non-blocking build warning: `metadataBase` not set (safe to ignore for now).
+- None currently blocking.
 
 ## 7) Working Agreements
 
-- Content updates → `data/*.json` only, never hardcode in components.
+- Content updates → data files in `data/` (JSON or TS), never hardcode in components.
 - Run `npm run build` before any push.
 - Prefer targeted changes; no broad refactor/cleanup passes unless explicitly requested.
 - Append session log entry every working session.

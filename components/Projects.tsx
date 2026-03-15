@@ -1,65 +1,59 @@
-import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
-import projectsData from "@/data/projects.json";
+"use client";
 
-interface ProjectItem {
-  title: string;
-  image: string;
-  description: string;
-  technologies: string[];
-  github: string;
-  demo: string | null;
-}
+import { useEffect, useState } from "react";
+import { FiChevronRight } from "react-icons/fi";
+import { projects } from "@/data/projectData";
+import type { Project } from "@/data/projectData";
+import ProjectModal from "@/components/ProjectModal";
 
 export default function Projects() {
-  const projects: ProjectItem[] = projectsData;
+  const [selected, setSelected] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  if (projects.length === 0) return null;
+  useEffect(() => {
+    if (selected) {
+      setIsModalOpen(true);
+    }
+  }, [selected]);
+
+  const openProject = (project: Project) => {
+    setSelected(project);
+  };
+
+  const closeProject = () => {
+    setIsModalOpen(false);
+    window.setTimeout(() => setSelected(null), 180);
+  };
 
   return (
-    <section id="projects" className="mb-24 scroll-mt-24">
-      <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-lightest-slate lg:hidden">
-        Projects
-      </h2>
-      <div className="flex flex-col gap-12">
-        {projects.map((project, i) => {
-          const link = project.demo || project.github;
-          return (
-            <a
+    <>
+      <section id="projects" className="mb-24 scroll-mt-24">
+        <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-lightest-slate lg:hidden">
+          Projects
+        </h2>
+        <div className="flex flex-col gap-12">
+          {projects.map((project, i) => (
+            <button
               key={i}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block rounded-lg border border-transparent p-5 transition-all lg:p-6 hover:border-[rgba(148,163,184,0.24)] hover:bg-[rgba(20,18,43,0.55)] hover:drop-shadow-lg"
+              onClick={() => openProject(project)}
+              className="group relative block w-full rounded-lg border border-transparent p-5 text-left transition-all lg:p-6 hover:border-[rgba(148,163,184,0.24)] hover:bg-[rgba(20,18,43,0.55)] hover:drop-shadow-lg"
             >
-              {/* Image Preview — horizontal, wider */}
-              <div className="mb-5 overflow-hidden rounded-md border-2 border-lightest-navy/30">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={560}
-                  height={300}
-                  className="h-auto w-full object-cover transition-opacity group-hover:opacity-80"
-                  unoptimized
-                />
-              </div>
-
               {/* Title */}
               <h3 className="text-lg font-medium leading-snug">
                 <span className="inline-flex items-center gap-2 text-white transition-colors group-hover:text-green">
                   {project.title}
-                  <FiExternalLink className="inline-block h-4 w-4 shrink-0" />
+                  <FiChevronRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
                 </span>
               </h3>
 
-              {/* Description — single paragraph */}
-              <p className="mt-3 text-sm leading-relaxed text-slate">
+              {/* Description */}
+              <p className="mt-3 text-sm leading-relaxed text-slate line-clamp-3">
                 {project.description}
               </p>
 
               {/* Tech tags */}
               <div className="mt-4 flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
+                {project.tech.map((tech) => (
                   <span
                     key={tech}
                     className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green border border-green/40"
@@ -68,10 +62,18 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </a>
-          );
-        })}
-      </div>
-    </section>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {selected && (
+        <ProjectModal
+          project={selected}
+          isOpen={isModalOpen}
+          onClose={closeProject}
+        />
+      )}
+    </>
   );
 }
