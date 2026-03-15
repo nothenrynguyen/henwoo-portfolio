@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/portfolio-preview.png",
+        url: "/images/portfolio-preview.svg",
         width: 1200,
         height: 630,
         alt: "Henry Nguyen Portfolio Preview",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "henry nguyen",
     description:
       "Personal portfolio of Henry Nguyen — UCLA CS '26, USC MSCS '28.",
-    images: ["/images/portfolio-preview.png"],
+    images: ["/images/portfolio-preview.svg"],
   },
 };
 
