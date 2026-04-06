@@ -30,7 +30,6 @@ export const projects: Project[] = [
       "A full-stack cafe discovery platform where users can sign in with Google, leave detailed reviews, favorite cafes, and explore locations on an interactive map. Includes an admin moderation dashboard for importing, hiding, restoring, and deleting cafes in production.",
     tech: ["Next.js", "Supabase", "Prisma", "Mapbox", "TypeScript"],
     githubUrl: "https://github.com/nothenrynguyen/matchadex",
-    demoUrl: "https://matchadex.vercel.app/",
     screenshots: [
       "/images/md1.png",
       "/images/md2.png",
@@ -44,7 +43,6 @@ export const projects: Project[] = [
       "A community digital flower garden where users can draw a flower, leave a message, and plant it for everyone to see. Built with React and Vite, backed by Supabase for real-time persistence, and deployed on Vercel.",
     tech: ["React", "Vite", "Supabase", "JavaScript", "CSS"],
     githubUrl: "https://github.com/nothenrynguyen/stay-in-bloom",
-    demoUrl: "https://stay-in-bloom.vercel.app",
     screenshots: [
       "/images/sib1.png",
       "/images/sib2.png",
