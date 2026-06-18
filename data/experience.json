@@ -1,25 +1,37 @@
 [
   {
     "title": "Software Engineer Intern",
+    "company": "Vitu",
+    "companyUrl": "",
+    "date": "Jun 2026 — Aug 2026",
+    "description": [
+      "Led migration of Vitu's employee intranet from Google Sites to a Next.js platform serving 1,000+ employees across 10+ teams.",
+      "Integrated Payload CMS with Google Workspace SSO, RBAC, and approval workflows, reducing content publish time by over 60%.",
+      "Built enterprise search indexing 450+ policies, FAQs, documents, and internal business tools to improve knowledge discovery.",
+      "Redesigned intranet navigation and information architecture to streamline access to critical business systems and resources."
+    ],
+    "technologies": ["Next.js", "Payload CMS", "Google SSO", "RBAC"]
+  },
+  {
+    "title": "Software Engineer Intern",
     "company": "Creative Labs",
     "companyUrl": "",
     "date": "Jan 2026 — Jun 2026",
     "description": [
-      "Designed REST APIs and PostgreSQL schemas used by 50+ testers to ingest activity data powering real-time analytics dashboards.",
-      "Implemented async workers with Redis to precompute metrics, reducing latency and improving dashboard responsiveness.",
-      "Built WebSocket live updates streaming activity data to dashboards in a cross-functional team of engineers and designers.",
-      "Deployed Dockerized services with CI/CD pipelines for reliable releases and scalable demos on Vercel and cloud VMs."
+      "Designed normalized PostgreSQL schemas and REST APIs powering real-time analytics used by 50+ testers across product teams.",
+      "Built Redis-backed event processing pipelines to aggregate user activity into analytics and precompute engagement metrics.",
+      "Implemented WebSocket-based live updates delivering real-time analytics and activity monitoring across cross-functional teams."
     ],
     "technologies": ["PostgreSQL", "Redis", "WebSockets", "CI/CD"]
   },
   {
     "title": "Software Engineer Intern",
-    "company": "Garrick Institute",
+    "company": "Garrick Institute for the Risk Sciences",
     "companyUrl": "https://risksciences.ucla.edu",
     "date": "Jun 2025 — Dec 2025",
     "description": [
-      "Engineered 10+ modular React components, enhancing UI consistency and accelerating data analysis workflows.",
-      "Integrated a React frontend with Python ML pipelines via REST APIs, cutting manual data handling by 40% for research teams.",
+      "Engineered 10+ modular React components, improving UI consistency and accelerating development of research analysis tools.",
+      "Integrated React frontends with Python-based machine learning pipelines via REST APIs, reducing manual data handling by 40%.",
       "Collaborated with graduate researchers to design dashboards visualizing ML outputs, improving clarity and decision-making."
     ],
     "technologies": ["React", "Python", "REST APIs", "Machine Learning"]
@@ -30,9 +42,9 @@
     "companyUrl": "https://dailybruin.com",
     "date": "Oct 2024 — Jun 2025",
     "description": [
-      "Refactored the website with React and Tailwind CSS, improving mobile performance and modernizing design components.",
-      "Created 10+ dynamic event pages and reusable widgets to streamline campus marketing and reduce repetitive development.",
-      "Resolved 20+ UI bugs and cross-device layout issues, improving site reliability and visual consistency for 5,000+ daily readers."
+      "Refactored React and TailwindCSS components to modernize styling, improve maintainability, and enhance mobile usability.",
+      "Developed 10+ dynamic event pages and reusable UI components, including event cards, calendars, and featured article widgets.",
+      "Resolved 20+ UI bugs and cross-device layout issues, improving reliability and overall user experience for 5,000+ daily readers."
     ],
     "technologies": ["React", "Tailwind CSS", "JavaScript", "HTML/CSS"]
   },
