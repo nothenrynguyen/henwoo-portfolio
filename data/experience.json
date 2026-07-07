@@ -2,7 +2,7 @@
   {
     "title": "Software Engineer Intern",
     "company": "Vitu",
-    "companyUrl": "",
+    "companyUrl": "https://vitu.com",
     "date": "Jun 2026 — Aug 2026",
     "description": [
       "Led migration of Vitu's employee intranet from Google Sites to a Next.js platform serving 1,000+ employees across 10+ teams.",
@@ -10,12 +10,12 @@
       "Built enterprise search indexing 450+ policies, FAQs, documents, and internal business tools to improve knowledge discovery.",
       "Redesigned intranet navigation and information architecture to streamline access to critical business systems and resources."
     ],
-    "technologies": ["Next.js", "Payload CMS", "Google SSO", "RBAC"]
+    "technologies": ["Next.js", "Payload CMS", "Google Cloud", "RBAC"]
   },
   {
     "title": "Software Engineer Intern",
     "company": "Creative Labs",
-    "companyUrl": "",
+    "companyUrl": "https://www.creativelabsucla.com/",
     "date": "Jan 2026 — Jun 2026",
     "description": [
       "Designed normalized PostgreSQL schemas and REST APIs powering real-time analytics used by 50+ testers across product teams.",

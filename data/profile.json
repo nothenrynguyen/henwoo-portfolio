@@ -2,10 +2,10 @@
   "name": "Henry Nguyen",
   "tagline": "UCLA CS '26 • USC MSCS '28",
   "about": [
-    "I’m a software engineer and computer science graduate student at USC. I did my undergraduate studies in computer science at UCLA, and I enjoy building clean, intuitive web experiences while learning how to design reliable, scalable systems.",
-    "Currently, I'm a software engineer intern at the Garrick Institute for the Risk Sciences, where I build modular React components and connect frontend interfaces to Python ML pipelines to support research workflows.",
-    "Previously, I worked with the Daily Bruin at UCLA, where I refactored parts of the website with React and Tailwind and shipped dynamic event pages for more than 5,000 daily readers.",
-    "Outside of work, you can usually find me playing volleyball or making music!"
+    "I'm a software engineer building clean, intuitive web experiences and learning how to design reliable, scalable systems. I studied computer science at UCLA and am now pursuing my master's at USC.",
+    "I'm currently a software engineer intern at Vitu, where I'm migrating a 1,000+ employee intranet to Next.js. Along the way, I've integrated enterprise search and Google Cloud SSO workflows to streamline access for teams company-wide.",
+    "Previously, I was active on campus through Creative Labs, the Garrick Institute for the Risk Sciences, and the Daily Bruin — building real-time analytics pipelines, React dashboards for ML research tools, and UI components for UCLA's daily newspaper. Across all three, I focused on shipping clean, reliable interfaces for real users, from 50+ product testers to 5,000+ daily readers.",
+    "Outside of work, you can usually find me playing volleyball or making music. I run Yolobun Studios, a creative collective built on music, community, and culture."
   ],
   "socialLinks": {
     "github": "https://github.com/nothenrynguyen",

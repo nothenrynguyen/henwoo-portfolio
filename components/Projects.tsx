@@ -32,38 +32,61 @@ export default function Projects() {
           Projects
         </h2>
         <div className="flex flex-col gap-12">
-          {projects.map((project, i) => (
-            <button
-              key={i}
-              onClick={() => openProject(project)}
-              className="group relative block w-full rounded-lg border border-transparent p-5 text-left transition-all lg:p-6 hover:border-[rgba(148,163,184,0.24)] hover:bg-[rgba(20,18,43,0.55)] hover:drop-shadow-lg"
-            >
-              {/* Title */}
-              <h3 className="text-lg font-medium leading-snug">
-                <span className="inline-flex items-center gap-2 text-white transition-colors group-hover:text-green">
-                  {project.title}
-                  <FiChevronRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
-                </span>
-              </h3>
+          {projects.map((project, i) => {
+            const cardClassName =
+              "group relative block w-full rounded-lg border border-transparent p-5 text-left transition-all lg:p-6 hover:border-[rgba(148,163,184,0.24)] hover:bg-[rgba(16,16,18,0.55)] hover:drop-shadow-lg";
 
-              {/* Description */}
-              <p className="mt-3 text-sm leading-relaxed text-slate line-clamp-3">
-                {project.description}
-              </p>
-
-              {/* Tech tags */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green border border-green/40"
-                  >
-                    {tech}
+            const cardContent = (
+              <>
+                {/* Title */}
+                <h3 className="text-lg font-medium leading-snug">
+                  <span className="inline-flex items-center gap-2 text-white transition-colors group-hover:text-green">
+                    {project.title}
+                    <FiChevronRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
                   </span>
-                ))}
-              </div>
-            </button>
-          ))}
+                </h3>
+
+                {/* Description */}
+                <p className="mt-3 text-sm leading-relaxed text-slate line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Tech tags */}
+                {project.tech.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full bg-green/10 px-3 py-1 text-xs font-medium text-green border border-green/40"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </>
+            );
+
+            return project.externalUrl ? (
+              <a
+                key={i}
+                href={project.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClassName}
+              >
+                {cardContent}
+              </a>
+            ) : (
+              <button
+                key={i}
+                onClick={() => openProject(project)}
+                className={cardClassName}
+              >
+                {cardContent}
+              </button>
+            );
+          })}
         </div>
       </section>
 

@@ -30,7 +30,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
     <>
       {/* Backdrop — click outside to close */}
       <div
-        className={`fixed inset-0 z-50 bg-[rgba(13,11,26,0.58)] backdrop-blur-sm transition-opacity duration-200 ${
+        className={`fixed inset-0 z-50 bg-[rgba(8,8,10,0.58)] backdrop-blur-sm transition-opacity duration-200 ${
           isOpen ? "opacity-100" : "opacity-0"
         }`}
         aria-hidden="true"
@@ -78,17 +78,19 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
           {/* Action buttons */}
           <div className="flex flex-wrap gap-3">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded border border-[rgba(100,255,218,0.4)]
-                         bg-[rgba(100,255,218,0.08)] px-4 py-2 text-sm font-medium
-                         text-[#64ffda] transition-colors hover:bg-[rgba(100,255,218,0.16)]"
-            >
-              <FiGithub size={15} />
-              GitHub
-            </a>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded border border-[rgba(100,255,218,0.4)]
+                           bg-[rgba(100,255,218,0.08)] px-4 py-2 text-sm font-medium
+                           text-[#64ffda] transition-colors hover:bg-[rgba(100,255,218,0.16)]"
+              >
+                <FiGithub size={15} />
+                GitHub
+              </a>
+            )}
             {project.demoUrl && (
               <a
                 href={project.demoUrl}

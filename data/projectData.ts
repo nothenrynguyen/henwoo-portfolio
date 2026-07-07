@@ -3,13 +3,23 @@ export interface Project {
   title: string;
   description: string;
   tech: string[];
-  githubUrl: string;
+  githubUrl?: string;
   demoUrl?: string;
+  /** If set, the card links straight here instead of opening the modal. */
+  externalUrl?: string;
   /** Paths relative to /public, e.g. "/images/foo.png" */
   screenshots: string[];
 }
 
 export const projects: Project[] = [
+  {
+    slug: "yolobun-studios",
+    title: "Yolobun Studios",
+    description: "A creative collective built on music, community, and culture.",
+    tech: ["Creative", "Community", "Culture", "Coming Soon"],
+    externalUrl: "https://yolobun.com",
+    screenshots: [],
+  },
   {
     slug: "signalflow",
     title: "Signal Flow",
