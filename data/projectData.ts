@@ -27,7 +27,6 @@ export const projects: Project[] = [
       "A real-time event analytics platform that ingests application events and visualizes live metrics through an interactive dashboard. Events are processed by a FastAPI backend, stored in Postgres, and streamed to a Next.js frontend via WebSockets for instant updates. Built as a lightweight observability system for tracking user activity and event throughput.",
     tech: ["Next.js", "FastAPI", "PostgreSQL", "WebSockets", "TypeScript"],
     githubUrl: "https://github.com/nothenrynguyen/SignalFlow",
-    demoUrl: "https://signalflow-dashboard.vercel.app/",
     screenshots: [
       "/images/signalflow%20dashboard.png",
       "/images/signalflow%20backend.png",
