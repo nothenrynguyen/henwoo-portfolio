@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { FiGithub, FiLinkedin, FiYoutube, FiMenu, FiX } from "react-icons/fi";
 import { FaSoundcloud } from "react-icons/fa";
+import { SiStrava, SiVsco } from "react-icons/si";
 import profile from "@/data/profile.json";
 
 const NAV_ITEMS = [
@@ -16,6 +17,8 @@ const SOCIAL_LINKS = [
   { icon: FiLinkedin, href: profile.socialLinks.linkedin, label: "LinkedIn" },
   { icon: FiYoutube, href: profile.socialLinks.youtube, label: "YouTube" },
   { icon: FaSoundcloud, href: profile.socialLinks.soundcloud, label: "SoundCloud" },
+  { icon: SiStrava, href: profile.socialLinks.strava, label: "Strava" },
+  { icon: SiVsco, href: profile.socialLinks.vsco, label: "VSCO" },
 ];
 
 export default function Sidebar() {
