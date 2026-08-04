@@ -42,15 +42,18 @@ export default function Experience() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-white transition-colors group-hover:text-green"
                   >
-                    {exp.title} · {exp.company}
+                    {exp.company}
                     <FiExternalLink className="ml-1 inline-block h-3 w-3 shrink-0" />
                   </a>
                 ) : (
                   <span className="inline-flex items-center gap-1 text-white">
-                    {exp.title} · {exp.company}
+                    {exp.company}
                   </span>
                 )}
               </h3>
+              <p className="mt-1 text-base font-medium leading-snug text-light-slate">
+                {exp.title}
+              </p>
 
               {exp.quote ? (
                 <p className="mt-3 text-sm italic leading-relaxed text-slate">
