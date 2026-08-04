@@ -18,7 +18,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="mb-24 scroll-mt-24">
-      <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-lightest-slate lg:hidden">
+      <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-blue lg:hidden">
         Experience
       </h2>
       <div className="flex flex-col gap-12">
@@ -27,31 +27,31 @@ export default function Experience() {
             key={i}
             className="group relative flex flex-col gap-4 rounded-lg border border-transparent p-5 transition-all sm:flex-row sm:gap-6 lg:p-6 hover:border-[rgba(148,163,184,0.24)] hover:bg-[rgba(16,16,18,0.55)] hover:drop-shadow-lg"
           >
-            {/* Date */}
-            <div className="w-36 shrink-0 whitespace-nowrap pt-1 text-xs font-semibold uppercase tracking-wide text-slate">
-              {exp.date}
-            </div>
-
-            {/* Content */}
-            <div className="min-w-0 flex-1">
+            {/* Company and date */}
+            <div className="w-full shrink-0 sm:w-44 sm:text-right">
               <h3 className="font-medium leading-snug">
                 {exp.companyUrl ? (
                   <a
                     href={exp.companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-white transition-colors group-hover:text-green"
+                    className="inline-flex items-start gap-1 text-white transition-colors group-hover:text-blue"
                   >
                     {exp.company}
-                    <FiExternalLink className="ml-1 inline-block h-3 w-3 shrink-0" />
+                    <FiExternalLink className="mt-1 h-3 w-3 shrink-0" />
                   </a>
                 ) : (
-                  <span className="inline-flex items-center gap-1 text-white">
-                    {exp.company}
-                  </span>
+                  <span className="text-white">{exp.company}</span>
                 )}
               </h3>
-              <p className="mt-1 text-base font-medium leading-snug text-light-slate">
+              <p className="mt-2 whitespace-nowrap text-xs font-semibold uppercase tracking-wide text-slate">
+                {exp.date}
+              </p>
+            </div>
+
+            {/* Content */}
+            <div className="min-w-0 flex-1">
+              <p className="text-base font-medium leading-snug text-blue">
                 {exp.title}
               </p>
 

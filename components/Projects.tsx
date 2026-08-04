@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <>
       <section id="projects" className="mb-24 scroll-mt-24">
-        <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-lightest-slate lg:hidden">
+        <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-blue lg:hidden">
           Projects
         </h2>
         <div className="flex flex-col gap-12">
@@ -40,7 +40,7 @@ export default function Projects() {
               <>
                 {/* Title */}
                 <h3 className="text-lg font-medium leading-snug">
-                  <span className="inline-flex items-center gap-2 text-white transition-colors group-hover:text-green">
+                  <span className="inline-flex items-center gap-2 text-white transition-colors group-hover:text-blue">
                     {project.title}
                     <FiChevronRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
                   </span>

@@ -96,7 +96,7 @@ export default function Sidebar() {
                 onClick={() => handleNavClick(item.href)}
                 className={`text-lg font-medium transition-colors ${
                   activeSection === item.href.slice(1)
-                    ? "text-green"
+                    ? "text-blue"
                     : "text-slate hover:text-lightest-slate"
                 }`}
               >
@@ -150,7 +150,7 @@ export default function Sidebar() {
                       onClick={() => handleNavClick(item.href)}
                       className={`group flex items-center gap-3 text-xs font-bold uppercase tracking-widest transition-all ${
                         isActive
-                          ? "text-lightest-slate"
+                          ? "text-blue"
                           : "text-slate hover:text-lightest-slate"
                       }`}
                       style={{ zIndex: 10 }}
@@ -158,10 +158,10 @@ export default function Sidebar() {
                       <span
                         className={`inline-block h-px transition-all ${
                           isActive
-                            ? "w-16 bg-slate"
+                            ? "w-16 bg-blue"
                             : "w-8 bg-slate group-hover:w-16 group-hover:bg-slate"
                         }`}
-                        style={{ backgroundColor: "var(--color-slate)", zIndex: 10 }}
+                        style={{ zIndex: 10 }}
                       />
                       <span className="transition-colors group-hover:text-lightest-slate">{item.label}</span>
                     </button>
