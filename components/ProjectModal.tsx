@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { FiX, FiGithub, FiExternalLink } from "react-icons/fi";
 import type { Project } from "@/data/projectData";
@@ -12,19 +12,48 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    },
-    [onClose]
-  );
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    if (!isOpen) return;
+
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (event.key !== "Tab" || !dialogRef.current) return;
+
+      const focusable = Array.from(
+        dialogRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
     document.addEventListener("keydown", handleKeyDown);
     return () => {
+      document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeyDown);
+      previouslyFocused?.focus();
     };
-  }, [handleKeyDown]);
+  }, [isOpen, onClose]);
 
   return (
     <>
@@ -42,6 +71,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
         onClick={onClose}
       >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-label={project.title}
@@ -63,6 +93,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
             {project.title}
           </h2>
           <button
+            ref={closeButtonRef}
             onClick={onClose}
             aria-label="Close"
             className="rounded p-1.5 text-[#8892b0] transition-colors
@@ -143,7 +174,6 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                       width={560}
                       height={340}
                       className="h-auto w-full object-cover"
-                      unoptimized
                     />
                   </div>
                 ))}

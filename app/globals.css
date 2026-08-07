@@ -24,11 +24,63 @@ html {
 }
 
 body {
-  background: var(--color-navy);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(63, 76, 160, 0.07), transparent 32rem),
+    var(--color-navy);
   color: var(--color-slate);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.background-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.project-reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 700ms ease-out,
+    transform 700ms ease-out,
+    border-color 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.project-reveal-item:hover {
+  transform: translateY(-0.25rem);
+}
+
+#projects[data-reveal="pending"] .project-reveal-item {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition-delay: 0ms;
+}
+
+#projects[data-reveal="visible"] .project-reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 ::selection {

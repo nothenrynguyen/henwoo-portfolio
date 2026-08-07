@@ -57,7 +57,7 @@ export default function Experience() {
 
               {exp.quote ? (
                 <p className="mt-3 text-sm italic leading-relaxed text-slate">
-                  "{exp.quote}"
+                  &ldquo;{exp.quote}&rdquo;
                 </p>
               ) : (
                 <ul className="mt-3 flex flex-col gap-2">

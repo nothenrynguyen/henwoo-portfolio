@@ -52,8 +52,10 @@ export default function Sidebar() {
       } else if (Math.abs(scrollY + windowHeight - docHeight) < 2) {
         setActiveSection("projects");
       }
+
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
       observer.disconnect();
@@ -122,7 +124,7 @@ export default function Sidebar() {
       )}
 
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-[600px] lg:flex-col lg:justify-between lg:pl-[12vw] lg:py-24">
+      <aside className="relative hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-full lg:flex-col lg:py-24">
         <div>
             <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-lightest-slate">
               <span className="whitespace-nowrap text-5xl font-bold tracking-tight text-white">
@@ -130,10 +132,10 @@ export default function Sidebar() {
               </span>
             </h1>
           <h2 className="mt-3 text-xl font-medium text-lightest-slate">
-            Software Developer
+            Software Engineer
           </h2>
-          <p className="mt-2 text-base text-slate">
-            always building
+          <p className="mt-3 max-w-sm text-base leading-relaxed text-slate">
+            Building real-time tools, thoughtful interfaces, and systems people enjoy using.
           </p>
           <p className="mt-1 text-sm text-slate">
             {profile.tagline}
@@ -172,8 +174,7 @@ export default function Sidebar() {
           </nav>
         </div>
 
-        {/* Social Icons — pinned to bottom */}
-        <div className="flex gap-6">
+        <div className="mt-auto flex gap-6">
           {SOCIAL_LINKS.map((link) => (
             <a
               key={link.label}
