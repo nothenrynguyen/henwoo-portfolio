@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+  <title id="title">Digital flower garden icon collection</title>
+  <rect width="1600" height="900" fill="#0b1020"/>
+  <g stroke="#0b1020" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(360 285) rotate(-7 170 190)">
+      <rect width="340" height="380" rx="100" fill="#bca6ff"/>
+      <path d="M170 294V151M170 238c-59-9-76-43-76-78 50-2 76 24 76 78ZM170 208c59-9 76-43 76-78-50-2-76 24-76 78Z" fill="#8be0bd"/>
+      <circle cx="170" cy="112" r="44" fill="#ffcf6e"/>
+      <circle cx="170" cy="62" r="38" fill="#f7efdc"/>
+      <circle cx="220" cy="112" r="38" fill="#f7efdc"/>
+      <circle cx="170" cy="162" r="38" fill="#f7efdc"/>
+      <circle cx="120" cy="112" r="38" fill="#f7efdc"/>
+    </g>
+    <g transform="translate(775 245) rotate(6 205 205)">
+      <rect width="410" height="410" rx="112" fill="#8be0bd"/>
+      <path d="M70 305h270M108 305c0-77 43-139 97-139s97 62 97 139" fill="#f7efdc"/>
+      <path d="M205 169V97M205 132c-39-5-56-28-56-53 37-1 56 17 56 53ZM205 132c39-5 56-28 56-53-37-1-56 17-56 53Z" fill="#ff9b9b"/>
+      <circle cx="205" cy="76" r="30" fill="#ffcf6e"/>
+    </g>
+    <g transform="translate(1075 560)">
+      <circle cx="82" cy="82" r="82" fill="#ffcf6e"/>
+      <path d="M82 30v104M30 82h104M46 46l72 72M118 46l-72 72" fill="none"/>
+    </g>
+  </g>
+</svg>

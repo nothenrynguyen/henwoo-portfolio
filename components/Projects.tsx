@@ -57,7 +57,7 @@ export default function Projects() {
             Things I&apos;ve built
           </h2>
           <span className="hidden text-xs uppercase tracking-widest text-slate sm:block">
-            2025—2026
+            {String(projects.length).padStart(2, "0")} projects
           </span>
         </div>
         <div className="grid gap-7 lg:grid-cols-2">
@@ -71,25 +71,13 @@ export default function Projects() {
             const cardContent = (
               <>
                 <div className="relative aspect-[16/9] overflow-hidden border-b border-white/[0.07] bg-[#0d0d16]">
-                  {project.screenshots[0] ? (
-                    <Image
-                      src={project.screenshots[0]}
-                      alt={`${project.title} preview`}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 700px"
-                      className="object-cover object-top opacity-80 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 overflow-hidden bg-[radial-gradient(circle_at_20%_10%,rgba(100,255,218,0.18),transparent_28%),radial-gradient(circle_at_78%_82%,rgba(130,170,255,0.22),transparent_34%),linear-gradient(135deg,#11111b,#09090d)]">
-                      <div className="absolute -left-6 top-1/2 h-px w-[115%] -rotate-6 bg-gradient-to-r from-transparent via-green/45 to-transparent" />
-                      <div className="absolute left-8 top-8 text-[clamp(2rem,7vw,4.5rem)] font-black tracking-[-0.06em] text-white/90">
-                        YOLOBUN
-                      </div>
-                      <div className="absolute bottom-8 left-9 text-xs font-semibold uppercase tracking-[0.32em] text-green/80">
-                        music · community · culture
-                      </div>
-                    </div>
-                  )}
+                  <Image
+                    src={project.coverImage}
+                    alt={`${project.title} cover artwork`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover opacity-80 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b11]/55 via-transparent to-transparent" />
                   <span className="absolute right-4 top-4 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-lightest-slate backdrop-blur-md">
                     0{i + 1}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+  <title id="title">Cafe discovery icon collection</title>
+  <rect width="1600" height="900" fill="#0b1020"/>
+  <g stroke="#0b1020" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(390 290) rotate(-6 190 165)">
+      <rect width="380" height="330" rx="96" fill="#8be0bd"/>
+      <path d="M94 86h170v124c0 48-38 76-85 76s-85-28-85-76V86Z" fill="#f7efdc"/>
+      <path d="M264 121h30c75 0 75 104 0 104h-30" fill="none"/>
+      <path d="M120 48c-24-35 24-42 0-75M181 48c-24-35 24-42 0-75M242 48c-24-35 24-42 0-75" fill="none" stroke="#ffcf6e"/>
+    </g>
+    <g transform="translate(830 220) rotate(7 190 220)">
+      <rect width="380" height="440" rx="104" fill="#f7efdc"/>
+      <path d="M190 72c-78 0-138 58-138 132 0 102 138 180 138 180s138-78 138-180c0-74-60-132-138-132Z" fill="#ff9b9b"/>
+      <circle cx="190" cy="202" r="56" fill="#0b1020" stroke="none"/>
+    </g>
+    <g transform="translate(1110 545)">
+      <circle cx="76" cy="76" r="76" fill="#bca6ff"/>
+      <path d="M76 30v92M30 76h92" fill="none"/>
+    </g>
+  </g>
+</svg>

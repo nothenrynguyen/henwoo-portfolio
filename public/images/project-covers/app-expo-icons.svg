@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+  <title id="title">Job search and application icon collection</title>
+  <rect width="1600" height="900" fill="#0b1020"/>
+  <g stroke="#0b1020" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(385 270) rotate(-6 170 200)">
+      <rect width="340" height="400" rx="76" fill="#f7efdc"/>
+      <circle cx="92" cy="103" r="34" fill="#7edbf1"/>
+      <path d="M150 89h112M150 124h84M76 204h188M76 263h148M76 322h108" fill="none"/>
+    </g>
+    <g transform="translate(790 250) rotate(5 205 180)">
+      <rect y="72" width="410" height="286" rx="82" fill="#8be0bd"/>
+      <path d="M138 76V48c0-32 25-48 55-48h24c30 0 55 16 55 48v28M0 178l154 74h102l154-74" fill="none"/>
+      <rect x="166" y="224" width="78" height="72" rx="25" fill="#f7efdc"/>
+    </g>
+    <g transform="translate(1055 535)">
+      <circle cx="95" cy="95" r="95" fill="#ffcf6e"/>
+      <path d="m48 98 31 31 64-72" fill="none"/>
+    </g>
+  </g>
+</svg>

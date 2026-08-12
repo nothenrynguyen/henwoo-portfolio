@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+  <title id="title">Follower and mutual friend icon collection</title>
+  <rect width="1600" height="900" fill="#0b1020"/>
+  <g stroke="#0b1020" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(390 260) rotate(-6 175 175)">
+      <rect width="350" height="350" rx="104" fill="#ff9b9b"/>
+      <circle cx="175" cy="129" r="60" fill="#f7efdc"/>
+      <path d="M78 280c7-70 48-103 97-103s90 33 97 103" fill="#f7efdc"/>
+    </g>
+    <g transform="translate(845 260) rotate(6 175 175)">
+      <rect width="350" height="350" rx="104" fill="#bca6ff"/>
+      <circle cx="175" cy="129" r="60" fill="#f7efdc"/>
+      <path d="M78 280c7-70 48-103 97-103s90 33 97 103" fill="#f7efdc"/>
+    </g>
+    <g transform="translate(680 540)">
+      <circle cx="120" cy="120" r="120" fill="#8be0bd"/>
+      <path d="M62 91c0-30 37-48 58-14 21-34 58-16 58 14 0 45-58 78-58 78S62 136 62 91Z" fill="#f7efdc"/>
+    </g>
+  </g>
+</svg>
