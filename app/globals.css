@@ -42,6 +42,17 @@ body {
   pointer-events: none;
 }
 
+.project-band {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .project-band {
+    width: min(1100px, calc(100vw - 12rem));
+    margin-left: calc((100% - min(1100px, calc(100vw - 12rem))) / 2);
+  }
+}
+
 .project-reveal-item {
   opacity: 1;
   transform: translateY(0);

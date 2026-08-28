@@ -124,7 +124,11 @@ export default function Sidebar() {
       )}
 
       {/* Desktop Sidebar */}
-      <aside className="relative hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-full lg:flex-col lg:py-24">
+      <aside
+        className={`relative hidden transform-gpu transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-full lg:flex-col lg:py-24 ${
+          activeSection === "projects" ? "lg:-translate-x-20 xl:-translate-x-32" : ""
+        }`}
+      >
         <div>
             <h1 className="whitespace-nowrap text-5xl font-bold tracking-tight text-lightest-slate">
               <span className="whitespace-nowrap text-5xl font-bold tracking-tight text-white">
@@ -134,9 +138,6 @@ export default function Sidebar() {
           <h2 className="mt-3 text-xl font-medium text-lightest-slate">
             Software Engineer
           </h2>
-          <p className="mt-3 max-w-sm text-base leading-relaxed text-slate">
-            Building real-time tools, thoughtful interfaces, and systems people enjoy using.
-          </p>
           <p className="mt-1 text-sm text-slate">
             {profile.tagline}
           </p>

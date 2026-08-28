@@ -7,8 +7,6 @@ export interface Project {
   demoUrl?: string;
   /** Artwork used by the portfolio grid. */
   coverImage: string;
-  /** If set, the card links straight here instead of opening the modal. */
-  externalUrl?: string;
   /** Paths relative to /public, e.g. "/images/foo.png" */
   screenshots: string[];
 }
@@ -19,9 +17,13 @@ export const projects: Project[] = [
     title: "Yolobun Studios",
     description: "A creative collective built on music, community, and culture.",
     tech: ["Creative", "Community", "Culture", "Coming Soon"],
-    externalUrl: "https://yolobun.com",
-    coverImage: "/images/project-covers/yolobun-studios-icons.svg",
-    screenshots: [],
+    demoUrl: "https://yolobun.com",
+    coverImage: "/images/project-covers/yolobun-studios.png",
+    screenshots: [
+      "/images/yolobun-studios-1.png",
+      "/images/yolobun-studios-2.png",
+      "/images/yolobun-studios-3.png",
+    ],
   },
   {
     slug: "app-expo",
@@ -31,8 +33,11 @@ export const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Cheerio", "GitHub Actions"],
     githubUrl: "https://github.com/nothenrynguyen/app-expo",
     demoUrl: "https://app-expo-one.vercel.app",
-    coverImage: "/images/project-covers/app-expo-icons.svg",
-    screenshots: [],
+    coverImage: "/images/project-covers/app-expo.png",
+    screenshots: [
+      "/images/app-expo-1.png",
+      "/images/app-expo-2.png",
+    ],
   },
   {
     slug: "only-friends",
@@ -42,8 +47,11 @@ export const projects: Project[] = [
     tech: ["React", "Vite", "TypeScript", "Vitest"],
     githubUrl: "https://github.com/nothenrynguyen/only-friends",
     demoUrl: "https://only-friends-lol.vercel.app",
-    coverImage: "/images/project-covers/only-friends-icons.svg",
-    screenshots: [],
+    coverImage: "/images/project-covers/only-friends.png",
+    screenshots: [
+      "/images/only-friends-1.png",
+      "/images/only-friends-2.png",
+    ],
   },
   {
     slug: "signalflow",
@@ -53,7 +61,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "FastAPI", "PostgreSQL", "WebSockets", "TypeScript"],
     githubUrl: "https://github.com/nothenrynguyen/SignalFlow",
     demoUrl: "https://signal-flow-eta.vercel.app",
-    coverImage: "/images/project-covers/signal-flow-icons.svg",
+    coverImage: "/images/project-covers/signal-flow.png",
     screenshots: [
       "/images/signalflow%20dashboard.png",
       "/images/signalflow%20backend.png",
@@ -67,7 +75,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Supabase", "Prisma", "Mapbox", "TypeScript"],
     githubUrl: "https://github.com/nothenrynguyen/matchadex",
     demoUrl: "https://matchadex.vercel.app",
-    coverImage: "/images/project-covers/matcha-dex-icons.svg",
+    coverImage: "/images/project-covers/matcha-dex.png",
     screenshots: [
       "/images/md1.png",
       "/images/md2.png",
@@ -82,7 +90,7 @@ export const projects: Project[] = [
     tech: ["React", "Vite", "Supabase", "JavaScript", "CSS"],
     githubUrl: "https://github.com/nothenrynguyen/stay-in-bloom",
     demoUrl: "https://stay-in-bloom.vercel.app",
-    coverImage: "/images/project-covers/stay-in-bloom-icons.svg",
+    coverImage: "/images/project-covers/stay-in-bloom.png",
     screenshots: [
       "/images/sib1.png",
       "/images/sib2.png",

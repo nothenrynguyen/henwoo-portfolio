@@ -51,7 +51,11 @@ export default function Projects() {
 
   return (
     <>
-      <section ref={sectionRef} id="projects" className="mb-24 scroll-mt-24">
+      <section
+        ref={sectionRef}
+        id="projects"
+        className="project-band mb-24 scroll-mt-24"
+      >
         <div className="project-reveal-item mb-8 flex items-end justify-between gap-6">
           <h2 className="text-xs font-bold uppercase tracking-[0.22em] text-blue">
             Things I&apos;ve built
@@ -63,19 +67,19 @@ export default function Projects() {
         <div className="grid gap-7 lg:grid-cols-2">
           {projects.map((project, i) => {
             const cardClassName =
-              "project-reveal-item group relative block w-full overflow-hidden rounded-2xl border border-white/[0.09] bg-[rgba(14,14,22,0.64)] text-left shadow-[0_18px_70px_rgba(0,0,0,0.2)] backdrop-blur-md hover:-translate-y-1 hover:border-blue/30 hover:bg-[rgba(18,18,29,0.78)] hover:shadow-[0_24px_90px_rgba(35,45,110,0.2)]";
+              "project-reveal-item group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/[0.09] bg-[rgba(14,14,22,0.64)] text-left shadow-[0_18px_70px_rgba(0,0,0,0.2)] backdrop-blur-md hover:-translate-y-1 hover:border-blue/30 hover:bg-[rgba(18,18,29,0.78)] hover:shadow-[0_24px_90px_rgba(35,45,110,0.2)]";
             const revealStyle = {
               ["--reveal-delay" as string]: `${120 + i * 90}ms`,
             };
 
             const cardContent = (
               <>
-                <div className="relative aspect-[16/9] overflow-hidden border-b border-white/[0.07] bg-[#0d0d16]">
+                <div className="relative aspect-[16/9] shrink-0 overflow-hidden border-b border-white/[0.07] bg-[#0d0d16]">
                   <Image
                     src={project.coverImage}
                     alt={`${project.title} cover artwork`}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 490px"
                     className="object-cover opacity-80 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b11]/55 via-transparent to-transparent" />
@@ -84,7 +88,7 @@ export default function Projects() {
                   </span>
                 </div>
 
-                <div className="p-5 sm:p-6">
+                <div className="flex min-h-[13rem] flex-1 flex-col p-5 sm:p-6">
                   <h3 className="text-xl font-semibold leading-snug">
                     <span className="inline-flex items-center gap-2 text-white transition-colors group-hover:text-blue">
                       {project.title}
@@ -92,12 +96,16 @@ export default function Projects() {
                     </span>
                   </h3>
 
-                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-light-slate">
+                  <p
+                    className={`mt-3 line-clamp-3 text-sm leading-relaxed text-light-slate ${
+                      project.slug === "yolobun-studios" ? "" : "min-h-[4.5rem]"
+                    }`}
+                  >
                     {project.description}
                   </p>
 
                   {project.tech.length > 0 && (
-                    <div className="mt-5 flex flex-wrap gap-2">
+                    <div className="mt-auto flex flex-wrap gap-2 pt-5">
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
@@ -108,22 +116,11 @@ export default function Projects() {
                       ))}
                     </div>
                   )}
-                  </div>
+                </div>
               </>
             );
 
-            return project.externalUrl ? (
-              <a
-                key={i}
-                href={project.externalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cardClassName}
-                style={revealStyle}
-              >
-                {cardContent}
-              </a>
-            ) : (
+            return (
               <button
                 key={i}
                 onClick={() => openProject(project)}

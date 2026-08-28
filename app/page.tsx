@@ -12,15 +12,12 @@ export default function Home() {
         <main className="pt-24 lg:col-start-2 lg:w-full lg:pt-24 lg:pb-24">
           <About />
           <Experience />
+          <Projects />
+
+          <footer className="mt-24 pb-8 text-center text-sm text-slate">
+            <p>made by henry</p>
+          </footer>
         </main>
-      </div>
-
-      <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-24">
-        <Projects />
-
-        <footer className="mt-24 pb-8 text-center text-sm text-slate">
-          <p>made by henry</p>
-        </footer>
       </div>
     </div>
   );
