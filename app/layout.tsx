@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "./ClientLayout";
 
-const inter = Inter({ subsets: ["latin"] });
 
 // metadataBase allows Next.js to resolve relative image paths to absolute URLs.
 // Prefer the configured custom domain, fall back to the production domain on
@@ -17,7 +15,7 @@ const siteUrl =
       : "http://localhost:3000");
 
 export const metadata: Metadata = {
-  title: "henry nguyen",
+  title: "henwoo.dev",
   description:
     "Personal portfolio of Henry Nguyen — UCLA CS '26, USC MSCS '28. Software engineer passionate about building elegant digital experiences.",
   metadataBase: new URL(siteUrl),
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "henry nguyen",
+    title: "henwoo.dev",
     description:
       "Personal portfolio of Henry Nguyen — UCLA CS '26, USC MSCS '28.",
     type: "website",
@@ -40,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "henry nguyen",
+    title: "henwoo.dev",
     description:
       "Personal portfolio of Henry Nguyen — UCLA CS '26, USC MSCS '28.",
     images: ["/images/portfolio-preview.png"],
@@ -54,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

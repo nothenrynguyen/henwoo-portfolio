@@ -16,7 +16,7 @@ export const projects: Project[] = [
     slug: "yolobun-studios",
     title: "Yolobun Studios",
     description: "A creative collective built on music, community, and culture.",
-    tech: ["Creative", "Community", "Culture", "Coming Soon"],
+    tech: ["Creative", "Community", "Culture", "Independent"],
     demoUrl: "https://yolobun.com",
     coverImage: "/images/project-covers/yolobun-studios.png",
     screenshots: [
@@ -27,15 +27,15 @@ export const projects: Project[] = [
   },
   {
     slug: "app-expo",
-    title: "App Expo",
+    title: "Empluzzed",
     description:
       "A free, verified early-career job aggregator with fresh U.S. internship and new-grad roles, direct employer application links, and automated hourly data refreshes.",
     tech: ["Next.js", "TypeScript", "Cheerio", "GitHub Actions"],
     githubUrl: "https://github.com/nothenrynguyen/app-expo",
-    demoUrl: "https://app-expo-one.vercel.app",
-    coverImage: "/images/project-covers/app-expo.png",
+    demoUrl: "https://empluzzed.fyi",
+    coverImage: "/images/empluzzed-home-current.png",
     screenshots: [
-      "/images/app-expo-1.png",
+      "/images/empluzzed-home-current.png",
       "/images/app-expo-2.png",
     ],
   },
