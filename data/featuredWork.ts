@@ -1,0 +1,27 @@
+export const featuredWork = [
+  {
+    slug: "empluzzed",
+    name: "Empluzzed",
+    category: "Job discovery platform",
+    url: "https://empluzzed.fyi",
+    image: "/images/empluzzed-home-current.png",
+    imageAlt: "Empluzzed homepage with internship and early-career job boards",
+    description: "A free internship and early-career job platform built for 1,000+ users. Brings listings from 14 feeds into one searchable place.",
+    engineering: "Built ingestion that validates records, prevents duplicates, and retries failed batches without blocking healthy feeds.",
+    technologies: "Next.js · FastAPI · PostgreSQL · AWS",
+    secondaryUrl: "https://empluzzed.fyi",
+    secondaryLabel: "Visit",
+  },
+  {
+    slug: "yolobun",
+    name: "Yolobun Studios",
+    category: "Creative collective",
+    url: "https://yolobun.com",
+    image: "/images/yolobun-team-current.png",
+    imageAlt: "Yolobun Studios artist member cards",
+    description: "A home for the music collective I run, bringing together artists, their music, and the community around them.",
+    technologies: "Music · Community · Web",
+    secondaryUrl: "https://yolobun.com",
+    secondaryLabel: "Visit",
+  },
+];

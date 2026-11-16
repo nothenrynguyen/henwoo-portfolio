@@ -1,16 +1,44 @@
 [
   {
-    "title": "Software Engineer Intern",
+    "company": "Keck Medicine of USC",
+    "title": "Software Engineer Intern · Research Software",
+    "date": "Sep 2026 – Present",
+    "summary": "Research data pipelines, processing jobs, and analysis tools.",
+    "description": [
+      "Built React and FastAPI research tools backed by PostgreSQL, linking 50K+ records with processing jobs and experiment results.",
+      "Automated dataset intake with validated imports and retryable Python workers, reducing median analysis turnaround by 60%.",
+      "Added role-based access, audit history, and job recovery. Tested worker crashes and duplicate submissions to keep processing reliable.",
+      "Built dashboards for job status, failed-run details, and result exports. Improved slow endpoints with query profiling, indexes, and pagination."
+    ],
+    "technologies": [
+      "React",
+      "FastAPI",
+      "Python",
+      "PostgreSQL"
+    ],
+    "quote": ""
+  },
+  {
     "company": "Vitu",
     "companyUrl": "https://vitu.com",
-    "date": "Jun 2026 — Aug 2026",
+    "title": "Software Engineer Intern",
+    "date": "Jun 2026 – Aug 2026",
+    "summary": "An employee intranet, from requirements through deployment.",
     "description": [
-      "Led migration of Vitu's employee intranet from Google Sites to a Next.js platform serving 1,000+ employees across 10+ teams.",
-      "Integrated Payload CMS with Google Workspace SSO, RBAC, and approval workflows, reducing content publish time by over 60%.",
-      "Built enterprise search indexing 450+ policies, FAQs, documents, and internal business tools to improve knowledge discovery.",
-      "Redesigned intranet navigation and information architecture to streamline access to critical business systems and resources."
+      "Owned a Next.js intranet migration for 1,000+ employees across 10+ business teams, from requirements through deployment.",
+      "Integrated Payload CMS, Google OAuth, and publishing approvals. Indexed 450+ documents and reduced publishing time by 60%.",
+      "Deployed Docker services on Cloud Run and Cloud SQL with CI, structured logs, and rollback support. Debugged API and access issues.",
+      "Worked with content owners on publishing states and acceptance checks, and refined navigation through employee feedback."
     ],
-    "technologies": ["Next.js", "Payload CMS", "Google Cloud", "RBAC"]
+    "technologies": [
+      "Next.js",
+      "Payload CMS",
+      "Google OAuth",
+      "Docker",
+      "Cloud Run",
+      "Cloud SQL"
+    ],
+    "quote": ""
   },
   {
     "title": "Software Engineer Intern",
@@ -22,31 +50,49 @@
       "Built Redis-backed event processing pipelines to aggregate user activity into analytics and precompute engagement metrics.",
       "Implemented WebSocket-based live updates delivering real-time analytics and activity monitoring across cross-functional teams."
     ],
-    "technologies": ["PostgreSQL", "Redis", "WebSockets", "CI/CD"]
+    "technologies": [
+      "PostgreSQL",
+      "Redis",
+      "WebSockets",
+      "CI/CD"
+    ],
+    "summary": "Real-time analytics, event pipelines, and live dashboards."
   },
   {
-    "title": "Software Engineer Intern",
-    "company": "Garrick Institute",
+    "company": "Garrick Institute, UCLA",
     "companyUrl": "https://risksciences.ucla.edu",
-    "date": "Jun 2025 — Dec 2025",
+    "title": "Software Developer · Research Team",
+    "date": "Jun 2025 – Dec 2025",
+    "summary": "Dashboards and Python APIs for comparing risk models.",
     "description": [
-      "Engineered 10+ modular React components, improving UI consistency and accelerating development of research analysis tools.",
-      "Integrated React frontends with Python-based machine learning pipelines via REST APIs, reducing manual data handling by 40%.",
-      "Collaborated with graduate researchers to design dashboards visualizing ML outputs, improving clarity and decision-making."
+      "Built React dashboards and Python APIs for risk-model comparisons, including validated uploads and reproducible analysis histories.",
+      "Automated asynchronous analysis and result retrieval, reducing manual dataset preparation and handling by 40%.",
+      "Created reusable comparison charts with loading, empty, and error states, and refined them with researchers during project reviews."
     ],
-    "technologies": ["React", "Python", "REST APIs", "Machine Learning"]
+    "technologies": [
+      "React",
+      "Python",
+      "REST APIs",
+      "Data Visualization"
+    ],
+    "quote": ""
   },
   {
-    "title": "Software Engineer Intern",
-    "company": "Daily Bruin",
+    "company": "Daily Bruin, UCLA",
     "companyUrl": "https://dailybruin.com",
-    "date": "Oct 2024 — Jun 2025",
+    "title": "Software Developer · Student Organization",
+    "date": "Oct 2024 – Jun 2025",
+    "summary": "Event pages and reusable components for the student newspaper.",
     "description": [
-      "Refactored React and TailwindCSS components to modernize styling, improve maintainability, and enhance mobile usability.",
-      "Developed 10+ dynamic event pages and reusable UI components, including event cards, calendars, and featured article widgets.",
-      "Resolved 20+ UI bugs and cross-device layout issues, improving reliability and overall user experience for 5,000+ daily readers."
+      "Built 10+ event pages and reusable React components, including calendars, event cards, and featured article widgets.",
+      "Resolved 20+ mobile layout and interaction bugs in React and Tailwind pages, checking fixes across screen sizes through peer review."
     ],
-    "technologies": ["React", "Tailwind CSS", "JavaScript", "HTML/CSS"]
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
+    "quote": ""
   },
   {
     "title": "Server / Food Runner",
@@ -55,6 +101,11 @@
     "date": "Aug 2022 — Jul 2024",
     "quote": "please be careful, they're very hot",
     "description": [],
-    "technologies": ["Folding XLBs", "Packing Takeout", "Being Awesome!"]
+    "technologies": [
+      "Folding XLBs",
+      "Packing Takeout",
+      "Being Awesome!"
+    ],
+    "summary": "Serving guests and keeping things moving during busy shifts."
   }
 ]

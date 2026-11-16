@@ -29,8 +29,8 @@ export const projects: Project[] = [
     slug: "app-expo",
     title: "Empluzzed",
     description:
-      "A free, verified early-career job aggregator with fresh U.S. internship and new-grad roles, direct employer application links, and automated hourly data refreshes.",
-    tech: ["Next.js", "TypeScript", "Cheerio", "GitHub Actions"],
+      "A free job discovery platform for 1,000+ users, processing 10K+ records from 14 feeds into 2,000+ active roles. Built validated, deduplicated ingestion with retries and failed-batch replay. Load tests measured p95 search latency below 250 ms at 50 concurrent users.",
+    tech: ["Next.js", "TypeScript", "Python", "FastAPI", "PostgreSQL", "AWS", "Docker"],
     githubUrl: "https://github.com/nothenrynguyen/app-expo",
     demoUrl: "https://empluzzed.fyi",
     coverImage: "/images/empluzzed-home-current.png",

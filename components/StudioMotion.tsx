@@ -10,16 +10,6 @@ export default function StudioMotion() {
     const context = canvas?.getContext("2d");
     if (!canvas || !context) return;
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const mobile = window.matchMedia("(max-width: 760px)");
-    const objects = Array.from(document.querySelectorAll<HTMLElement>(".floating"));
-    const projects = Array.from(document.querySelectorAll<HTMLElement>(".project"));
-    // State changes trigger time-based transitions, independent of scroll position.
-    const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        (entry.target as HTMLElement).dataset.scene = entry.isIntersecting ? "focused" : "resting";
-      }
-    }, { threshold: 0.18, rootMargin: "-5% 0px -5% 0px" });
-    projects.forEach(project => observer.observe(project));
     let width = window.innerWidth;
     let height = window.innerHeight;
     let frame = 0;
@@ -88,19 +78,6 @@ export default function StudioMotion() {
         }
         context.stroke();
       }
-      const bounds = objects.map(object => object.getBoundingClientRect());
-      objects.forEach((object, index) => {
-        const rect = bounds[index];
-        const progress = Math.max(-1.4, Math.min(1.4, (height * 0.52 - (rect.top + rect.height / 2)) / height));
-        const active = !reduced && !mobile.matches;
-        object.style.setProperty("--scene-z", `${active ? progress * (object.classList.contains("project-visual") ? 280 : 140) : 0}px`);
-        object.style.setProperty("--scene-tilt", `${active ? progress * -5 : 0}deg`);
-        object.style.setProperty("--pointer-x", `${active ? currentX * 2 : 0}deg`);
-        object.style.setProperty("--pointer-y", `${active ? currentY * -2 : 0}deg`);
-        if (object.dataset.depth) {
-          object.style.setProperty("--drift", `${active ? Math.min(window.scrollY, height * 1.5) * Number(object.dataset.depth) : 0}px`);
-        }
-      });
       if (!reduced && !document.hidden) frame = requestAnimationFrame(draw);
     };
     const start = () => { if (!frame) frame = requestAnimationFrame(draw); };
@@ -122,8 +99,6 @@ export default function StudioMotion() {
     media.addEventListener("change", start);
     return () => {
       cancelAnimationFrame(frame);
-      observer.disconnect();
-      projects.forEach(project => delete project.dataset.scene);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", start);
       window.removeEventListener("pointermove", onPointer);
