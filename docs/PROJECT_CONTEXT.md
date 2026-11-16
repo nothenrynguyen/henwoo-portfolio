@@ -66,6 +66,13 @@ Detailed setup notes: `docs/SETUP_WINDOWS.md`
 
 ## 8) Session Log (Append Newest on Top)
 
+### 2026-11-16 - Updated graduation photo and small portfolio edits
+
+- Replaced the previous graduation-together photo with the supplied updated image, retaining its first/leftmost position.
+- Updated YouTube to @henwuu, added the LinkedIn "Let's work together" link, and matched photo dialog crops to the 3:4 portrait cards.
+- User requested publication of these edits to main.
+
+
 ### 2026-11-15 - Personal photography and project links
 
 - Added user-supplied graduation photo beside the intro and four personal photos below the bio.

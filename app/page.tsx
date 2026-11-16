@@ -42,7 +42,7 @@ export default function Home() {
           </article>)}</div>
         </section>
         <PortfolioDetails variant="archive" />
-        <section id="about" className="about-section"><h2>A little about me</h2><div><p>{profile.about[0]}</p><p>{profile.personalNote}</p><p>{profile.sideProjects.map((project, index) => <span key={project.name}>{index > 0 && " "}{project.prefix}<a href={project.url} target="_blank" rel="noreferrer">{project.name}</a>{project.description}</span>)}</p></div></section>
+        <section id="about" className="about-section"><h2>A little about me</h2><div><p>{profile.about[0]}</p><p>{profile.personalNote}</p><p>{profile.sideProjects.map((project, index) => <span key={project.name}>{index > 0 && " "}{project.prefix}<a href={project.url} target="_blank" rel="noreferrer">{project.name}</a>{project.description}</span>)}</p><p><a href={profile.socialLinks.linkedin} target="_blank" rel="noreferrer">Let’s work together ↗</a></p></div></section>
         <PhotoGallery />
       </main>
       <footer id="connect" className="site-footer"><a className="wordmark" href="#">henwoo.dev</a><SocialLinks /><a className="back-top" href="#">Back to top ↑</a></footer>
